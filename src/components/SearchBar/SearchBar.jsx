@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { useSearch } from '../../context/SearchContext'
 import { useNavigate } from 'react-router-dom';
+import { usePagination } from '../../context/PageContext';
 
 const SearchBar = () => {
 
     const [search, setSearch] = useSearch();
     const [inputValue, setinputValue] = useState('');
+    const [page, setPage] = usePagination();
 
     const navigate = useNavigate();
 
@@ -14,6 +16,7 @@ const SearchBar = () => {
         if (!inputValue.trim()) return;
 
         navigate('/search?query=' + inputValue.trim());
+        setPage(1);
         setSearch(inputValue.trim());
         setinputValue('');
     }
