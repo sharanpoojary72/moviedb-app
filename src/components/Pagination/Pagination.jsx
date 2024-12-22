@@ -5,6 +5,10 @@ const Pagination = ({ page, setPage,totalPages }) => {
     
     const [inputValue, setInputValue] = useState(page);
 
+    useEffect(() => {
+        setInputValue(page);
+    }, [page]);
+
     const handlePrev = () => {
         if (page > 1) {
             setPage(page - 1);
@@ -46,10 +50,6 @@ const Pagination = ({ page, setPage,totalPages }) => {
         setInputValue(page + 1); 
         window.scrollTo(0, 0);
     };
-
-    useEffect(() => {
-        
-    })
 
     return (
         <div className='my-10 flex gap-4 justify-center'>
