@@ -41,6 +41,10 @@ const route = createBrowserRouter([
       {
         path:'/search',
         element: <HomePage />
+      },
+      {
+        path:'*',
+        element:<Navigate to='/popular' replace={true}/>
       }
     ]
   }
