@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const MovieCard = (props) => {
     return (
         <div className='flex gap-4 justify-center'>
-            {/* Movie Card */}
+
             <div className='w-[200px] transition-all duration-300  hover:text-[#ff0000] '>
                 <NavLink to={`/moviedetails/${props.movie.id}`}>
                     {/* Movie Image */}

@@ -15,7 +15,7 @@ const CastCard = (cast) => {
                 xl:h-[300px] lg:h-[250px] md:h-[250px] sm:h-[230px] max-sm:h-[200px]'
             ></div>
 
-            {/* Movie Details */}
+
             <div className='p-2'>
                 <p className='font-semibold text-lg'>{cast.cast.name}</p>
                 <p className='text-gray-400 text-sm'>

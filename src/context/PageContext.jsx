@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Create Context
+
 const PaginationContext = createContext();
 
-// Pagination Provider
+
 export const PaginationProvider = ({ children }) => {
     const [page, setPage] = useState(1);
 
@@ -14,7 +14,6 @@ export const PaginationProvider = ({ children }) => {
     );
 };
 
-// usePagination Hook
 export const usePagination = () => {
     const context = useContext(PaginationContext);
     if (!context) {
