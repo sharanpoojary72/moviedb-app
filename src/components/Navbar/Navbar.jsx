@@ -35,11 +35,11 @@ const Navbar = () => {
             sm:text-base md:text-md lg:text-lg xl:text-lg max-sm:col-span-2 max-md:col-span-2'>
 
                 <li onClick={handlePage}><NavLink className={({ isActive }) =>
-                    isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] p-1 rounded'} to={'/popular'}>Popular</NavLink></li>
+                    `rounded p-1 ${isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] rounded'}`} to={'/popular'}>Popular</NavLink></li>
                 <li onClick={handlePage}><NavLink className={({ isActive }) =>
-                    isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] p-1 rounded'} to={'/toprated'}>Top Rated</NavLink></li>
+                    `rounded p-1 ${isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] rounded'}`} to={'/toprated'}>Top Rated</NavLink></li>
                 <li onClick={handlePage}><NavLink className={({ isActive }) =>
-                    isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] p-1 rounded'} to={'/upcoming'}>Upcoming</NavLink></li>
+                    `rounded p-1 ${isActive ? 'text-[#ff0000]' : 'hover:bg-[#ff0000] rounded'}`} to={'/upcoming'}>Upcoming</NavLink></li>
             </ul>
             <div className="search flex justify-end 
             max-sm:order-2 max-sm:col-span-3 max-sm:justify-center max-md:col-span-3 max-md:justify-center  ">
