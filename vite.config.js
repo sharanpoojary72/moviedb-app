@@ -4,8 +4,12 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/', // Ensure this matches your deployment environment
   build: {
-    outDir: 'dist', // Default output directory for Vite
+    outDir: 'dist',
   },
-})
+  server: {
+    port: 5173,
+    open: true,
+  },
+});
